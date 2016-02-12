@@ -1,0 +1,310 @@
+/* Global Layout Set-up -----------------*/
+* { 
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+  color: #4a4a4a;
+  background-color: #fff;
+}
+
+h1 {
+    font-size:1.3em;
+    margin:0;
+    padding:1em 0;
+}
+
+h3 {
+    margin:0;
+    padding:1em;
+}
+
+label {
+    margin:0.2em 0;
+    display: block;
+}
+
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+a:hover {
+  color: #6633ff;
+}
+
+/* Section Styles -----------------*/
+
+/* Header Styles */
+
+header {
+    margin:0;
+    padding:0;
+    background-color: #2d3945;
+    color:#fff;
+    text-align: center;
+}
+
+.main-content {
+    width: 90%;
+    margin:30px 5%;
+}
+
+.form-header {
+    text-align: center;
+    color: #2d3945;
+    border-bottom: double 7px #2d3945;
+}
+
+.form-header p {
+    color: #b1b5b9;
+    font-weight: lighter;
+    margin:0 0 1em 0;
+}
+
+/* Form Styles */
+
+form {
+    width:100%;
+    height:auto;
+    text-align: left;
+    color: #2d3945;
+}
+
+.label-text {
+    margin:1em 0;
+    border: none;
+    padding:0;
+}
+
+fieldset.contact-info {
+    border: none;
+    padding: 0;
+    margin: 2em 0 2em 0;
+}
+
+fieldset.newsletter {
+    border:none;
+    padding: 0;
+    margin: 0;
+    border-top: solid 2px #2d3945;
+}
+
+input[type="text"], select {
+   margin:0;
+   font-size: 1em;
+   padding:1.2em 0.5em;
+   background-color: #eff0f1;
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border: none;
+   display: block;
+   width: 100%;
+   overflow: hidden;
+}
+
+select {
+    height:58px;
+}
+
+textarea {
+    width:100%;
+    background-color: #eff0f1;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    padding:1.2em 0.5em;
+    height:6em;
+    resize: none;
+}
+
+select#state {
+    color: #9da3a8;
+}
+
+select option {
+    color: #2d3945;
+}
+
+/* Form Placeholder */
+
+.req-wrapper {
+    position: relative;
+}
+
+.req-label {
+    font-size:0.8em;
+    color: #9da3a8;
+    text-align: right;
+    padding:0 1.5em;
+    font-style: italic;
+    position: absolute;
+    right: 5px;
+    bottom: 19px;
+} 
+
+/* Pseudoclass Styles for text/textarea/select elements */
+
+#email:focus + label, #name:focus + label {
+        display: none;
+}
+
+select:focus, input[type="text"]:focus, textarea:focus {
+    box-shadow:0px 0px 0px 2px #46698b inset;
+    -moz-box-shadow: 0px 0px 0px 2px #46698b inset;
+    -webkit-box-shadow: 0px 0px 0px 2px #46698b inset;
+    background-color: #eff0f1;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    font-style: normal;
+    color: #4a4a4a;
+    padding:1.2em 0.5em;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+}
+
+select:not(:focus), input[type="text"]:not(:focus), textarea:not(:focus) {
+    border: none;
+    margin:0;
+}
+
+input#zip {
+    width:50%;
+}
+
+/* Pseudoclass Styles for checkbox/radio button/button elements */
+
+input[type="checkbox"], input[type="radio"] {
+    display:none;
+}
+input[type="checkbox"] + label:before {
+    content: "";
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin-right: 8px;  
+    vertical-align:middle;
+    background:url('../images/checkbox_custom.png') left bottom no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label:before {
+    content:""; 
+    background:url('../images/checkbox_custom.png') left -4px no-repeat;
+}
+
+input[type="radio"] + label:before {
+    content: "";
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin-right: 8px;  
+    vertical-align:middle;
+    background-color: #eff0f1;
+    cursor:pointer;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:before {
+    content: "\2022"; /* Bullet */
+    background-color: #eff0f1;
+    color: #46698b;
+    text-align: center;
+    font-size:3.5em;
+    line-height:23px;
+    box-shadow:0px 0px 0px 2px #46698b inset;
+    -moz-box-shadow: 0px 0px 0px 2px #46698b inset;
+    -webkit-box-shadow: 0px 0px 0px 2px #46698b inset;
+}
+
+button {
+    margin: 1em 0;
+    width:100%;
+    background-color: #4ebbb5;
+    padding:1em 0;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+/* Footer Styles */
+
+footer {
+    text-align: center;
+    font-weight: lighter;
+    color: #9da3a8;
+}
+
+/* Styles for larger screens -----------------*/
+
+@media screen and (min-width: 900px) {        
+    
+    .main-content {
+        width: 50%;	
+        margin:30px 25%
+    }  
+
+    input[type="text"], select {
+        display: inline-block;
+        float: right;
+        width: 75%;
+    }
+
+    select {
+        padding:3em 0;
+    }
+    
+    .contact-info label { 
+        display: inline-block;
+        margin:1.1em 0;
+    }
+    
+    .label-text {
+        display: block;
+        height: 4.5em;
+        width:100%;
+    }
+    
+    .req-label {
+        font-size:0.8em;
+        color: #9da3a8;
+        text-align: right;
+        padding:0 1.5em;
+        font-style: italic;
+        position: absolute;
+        right: 5px;
+        top: 7px;
+        margin:0;
+    } 
+    
+    #email:focus + label, #name:focus + label {
+        display: none;
+    }
+
+    select:focus, input[type="text"]:focus {
+        border: none;
+        font-size: 1em;
+        font-style: normal;
+        color: #4a4a4a;
+        width: 75%;
+        overflow: hidden;
+        text-align: left;
+    }
+    
+}
